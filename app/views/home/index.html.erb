@@ -1,2 +1,14 @@
 <h1>CookBook</h1>
 <p>Bem-vindo ao maior livro de receitas online</p>
+
+<% @recipes.each do |r| %>
+  <ul>
+    <li><h1><%= r.title %></h1></li>
+    <li><%= r.recipe_type %></li>
+    <li><%= r.cuisine %></li>
+    <li><%= r.difficulty %></li>
+    <li><%= r.cook_time %> minutos</li>
+  </ul>
+
+  </tr>
+<% end %>
