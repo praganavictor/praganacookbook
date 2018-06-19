@@ -1,0 +1,32 @@
+<h1>Registrando sua receita</h1>
+<%= form_for @recipe do |f| %>
+<p>
+  <%= f.label :title, "Título" %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :recipe_type, "Tipo da Receita" %>
+  <%= f.text_field :recipe_type %>
+</p>
+<p>
+  <%= f.label :cuisine, "Cozinha" %>
+  <%= f.text_field :cuisine %>
+</p>
+<p>
+  <%= f.label :difficulty, "Dificuldade" %>
+  <%= f.text_field :difficulty %>
+</p>
+<p>
+  <%= f.label :cook_time, "Tempo de Preparo" %>
+  <%= f.text_field :cook_time %>
+</p>
+<p>
+  <%= f.label :ingredients, "Ingredientes" %>
+  <%= f.text_area :ingredients %>
+</p>
+<p>
+  <%= f.label :method, "Como Preparar" %>
+  <%= f.text_area :method %>
+</p>
+<%= f.submit "Enviar" %>
+<% end %>
