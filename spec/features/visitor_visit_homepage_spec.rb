@@ -11,7 +11,7 @@ feature 'Visitor visit homepage' do
   scenario 'and view recipe' do
     #cria os dados necessários
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',
-                          cuisine: 'Brasileira', difficulty: 'Médio',
+                          cuisine: 'Brasileira', difficulty: 'Médio', 
                           cook_time: 60)
 
     # simula a ação do usuário

@@ -3,7 +3,7 @@
 
 <% @recipes.each do |r| %>
   <ul>
-    <li><h1><%= r.title %></h1></li>
+    <li><h1><%= link_to r.title, recipe_path(r.id) %></h1></li>
     <li><%= r.recipe_type %></li>
     <li><%= r.cuisine %></li>
     <li><%= r.difficulty %></li>
