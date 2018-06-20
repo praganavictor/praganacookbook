@@ -1,0 +1,12 @@
+<h1>Registrar Cozinha</h1>
+<% @cuisine.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+<%= form_for @cuisine do |f| %>
+  <p>
+    <%= f.label :name, "Nome" %>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit "Enviar" %>
+<% end %>
+<%= link_to "Voltar", root_path %>

@@ -2,16 +2,20 @@
 <p>Bem-vindo ao maior livro de receitas online</p>
 
 <%= link_to "Enviar uma receita", new_recipe_path %>
+<br>
+<%= link_to "Criar cozinha", new_cuisine_path %>
+<hr>
+
 <div class="cuisine">
-  <h3>Cozinha</h3>
   <ul>
     <% @cuisines.each do |c| %>
+    <h3>Cozinha</h3>
       <li><%= link_to c.name, cuisine_path(c.id)%></li>
     <% end %>
   </ul>
 </div>
 
-
+<hr>
 
 <% @recipes.each do |r| %>
   <ul>
