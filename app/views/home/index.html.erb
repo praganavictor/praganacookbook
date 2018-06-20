@@ -1,7 +1,17 @@
-<h1>CookBook</h1>
+<h1><b>CookBook</b></h1>
 <p>Bem-vindo ao maior livro de receitas online</p>
 
 <%= link_to "Enviar uma receita", new_recipe_path %>
+<div class="cuisine">
+  <h3>Cozinha</h3>
+  <ul>
+    <% @cuisines.each do |c| %>
+      <li><%= link_to c.name, cuisine_path(c.id)%></li>
+    <% end %>
+  </ul>
+</div>
+
+
 
 <% @recipes.each do |r| %>
   <ul>
