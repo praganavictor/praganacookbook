@@ -1,4 +1,9 @@
 <h1>Registrando sua receita</h1>
+
+<% @recipe.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+
 <%= form_for @recipe do |f| %>
 <p>
   <%= f.label :title, "Título" %>
