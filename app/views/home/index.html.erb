@@ -19,7 +19,7 @@
   <ul>
     <% @recipe_types.each do |rt| %>
       <h3>Receitas por tipo</h3>
-      <li><%= link_to rt.name, recipetype_path(rt.id) %></li>
+      <li><%= link_to rt.name, recipe_type_path(rt.id) %></li>
     <% end %>
   </ul>
 </div>

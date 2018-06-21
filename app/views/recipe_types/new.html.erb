@@ -1,0 +1,12 @@
+<h1>Registrar tipo de receita</h1>
+<% @recipe_type.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+<%= form_for @recipe_type do |f| %>
+  <p>
+    <%= f.label :name, "Nome" %>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit "Enviar" %>
+<% end %> %>
+<%= link_to "Voltar", root_path %>
