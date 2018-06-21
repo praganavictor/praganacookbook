@@ -20,7 +20,7 @@
 <% @recipes.each do |r| %>
   <ul>
     <li><h1><%= link_to r.title, recipe_path(r.id) %></h1></li>
-    <li><%= r.recipe_type %></li>
+    <li><%= r.recipe_type.name %></li>
     <li><%= r.cuisine.name %></li>
     <li><%= r.difficulty %></li>
     <li><%= r.cook_time %> minutos</li>

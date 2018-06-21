@@ -3,7 +3,7 @@
 <% @recipe.each do |r| %>
   <h1><%= r.title %></h1>
   <ul>
-    <li><%= r.recipe_type %></li>
+    <li><%= r.recipe_type.name %></li>
     <li><%= r.cuisine.name %></li>
     <li><%= r.difficulty %></li>
     <li><%= r.cook_time %> minutos</li>
