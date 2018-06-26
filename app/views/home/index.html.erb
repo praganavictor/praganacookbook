@@ -1,6 +1,10 @@
 <h1><b>CookBook</b></h1>
 <p>Bem-vindo ao maior livro de receitas online</p>
 
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
 <%= link_to "Enviar uma receita", new_recipe_path %>
 <br>
 <%= link_to "Criar cozinha", new_cuisine_path %>
