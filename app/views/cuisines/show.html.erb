@@ -1,5 +1,5 @@
 <h1><%= @cuisine.name %></h1>
-
+<%= link_to "Editar", edit_cuisine_path(@cuisine) %>
 <% @recipe.each do |r| %>
   <h1><%= r.title %></h1>
   <ul>

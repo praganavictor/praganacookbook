@@ -12,8 +12,8 @@
 
 <div class="cuisine">
   <ul>
-    <% @cuisines.each do |c| %>
     <h3>Cozinha</h3>
+    <% @cuisines.each do |c| %>
       <li><%= link_to c.name, cuisine_path(c.id)%></li>
     <% end %>
   </ul>
@@ -21,8 +21,8 @@
 
 <div class="recipe_type">
   <ul>
+    <h3>Receitas por tipo</h3>
     <% @recipe_types.each do |rt| %>
-      <h3>Receitas por tipo</h3>
       <li><%= link_to rt.name, recipe_type_path(rt.id) %></li>
     <% end %>
   </ul>
@@ -30,6 +30,7 @@
 
 <hr>
 
+<h1>Ultimas receitas</h1>
 <% @recipes.each do |r| %>
   <ul>
     <li><h1><%= link_to r.title, recipe_path(r.id) %></h1></li>
@@ -38,6 +39,5 @@
     <li><%= r.difficulty %></li>
     <li><%= r.cook_time %> minutos</li>
   </ul>
-
   </tr>
 <% end %>
