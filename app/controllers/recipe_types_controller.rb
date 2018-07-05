@@ -17,4 +17,18 @@ class RecipeTypesController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @recipe_type = RecipeType.find(params[:id])
+  end
+
+  def update
+    recipe_type_name = params.require(:recipe_type).permit(:name)
+    @recipe_type = RecipeType.find(params[:id])
+    if @recipe_type.update(recipe_type_name)
+      redirect_to @recipe_type
+    else
+      render 'edit'
+    end
+  end
 end
