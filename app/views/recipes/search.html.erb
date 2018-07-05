@@ -1,0 +1,9 @@
+<h1>Resultado da busca por: <%= @busca.title %></h1>
+
+<h1><%= link_to @busca.title, recipe_path(@busca) %></h1>
+<ul>
+  <li><%= @busca.recipe_type.name %></li>
+  <li><%= @busca.cuisine.name %></li>
+  <li><%= @busca.difficulty %></li>
+  <li><%= @busca.cook_time %> minutos</li>
+</ul>

@@ -8,6 +8,12 @@
 <%= link_to "Enviar uma receita", new_recipe_path %>
 <br>
 <%= link_to "Criar cozinha", new_cuisine_path %>
+<br>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:Busca, "Busca:") %>
+  <%= text_field_tag(:Busca) %>
+  <%= submit_tag("Buscar") %>
+<% end %>
 <hr>
 
 <div class="cuisine">

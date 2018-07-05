@@ -38,6 +38,14 @@ class RecipesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @busca = Recipe.find_by title: params[:Busca]
+    if @busca.nil?
+      flash[:notice] = "Receita não encontrada."
+      redirect_to root_path
+    end
+  end
+
   private
   def recipe_params
     params.require(:recipe).permit(:title, :recipe_type_id, :cuisine_id, :difficulty,
